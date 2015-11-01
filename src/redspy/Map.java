@@ -48,8 +48,4 @@ public class Map {
 		}
 	}
 	
-	public Map getMap() {
-		return map;
-	}
-	
 }
