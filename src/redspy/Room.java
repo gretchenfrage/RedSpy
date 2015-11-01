@@ -56,7 +56,7 @@ public class Room implements GetName {
 		if (mercenaries.size() == 0) {
 			System.out.println("You are alone in " + name);
 		} else {
-			System.out.println("You are in " + name + " with " + StringHandling.toCommaSeperatedString(mercenaries));
+			System.out.println("You are in " + name + " with " + GetName.toCommaSeperatedString(mercenaries));
 		}
 	}
 	
