@@ -22,11 +22,11 @@ public class Mercenary {
 		return "Mercenarius Genericus";
 	}
 	
-	public Status getStatus() {
+	public final Status getStatus() {
 		return status;
 	}
 	
-	public void setStatus(Status statusIn) {
+	public final void setStatus(Status statusIn) {
 		status = statusIn;
 	}
 	
