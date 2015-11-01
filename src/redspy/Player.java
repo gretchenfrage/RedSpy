@@ -1,6 +1,5 @@
 package redspy;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Player {
@@ -18,7 +17,6 @@ public class Player {
 		return room;
 	}
 	
-	@SuppressWarnings("incomplete-switch")
 	public void takeUserTurn() {
 		System.out.println("What do you do?");
 		if (room.getExits().size() > 0) {
