@@ -12,6 +12,7 @@ public class Game {
 	private Mercenary medic = new Mercenary(map);
 	private Mercenary sniper = new Mercenary(map);
 	private Mercenary spy = new Mercenary(map);
+	private Player player = new Player(this);
 
 	public static void main(String[] args) {
 		Game game = new Game();
@@ -20,6 +21,10 @@ public class Game {
 	
 	public void play() {
 		System.out.println("ADMINISTRATOR: red spy is in the base!");
+	}
+	
+	public Map getMap() {
+		return map;
 	}
 
 }
