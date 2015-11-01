@@ -52,19 +52,43 @@ public class Player {
 	}
 	
 	private void shoot(String targetName) {
-		
+		Mercenary target = (Mercenary) GetName.getItemWithName(room.getConsciousMercenaries(), targetName);
+		if (target == null) {
+			System.out.println("ERROR: " + targetName + " is not a valid person to shoot! Try again:");
+			undergoUserInput();
+		} else {
+			
+		}
 	}
 	
 	private void talkTo(String targetName) {
-		
+		Mercenary target = (Mercenary) GetName.getItemWithName(room.getConsciousMercenaries(), targetName);
+		if (target == null) {
+			System.out.println("ERROR: " + targetName + " is not a valid person to talk to! Try again:");
+			undergoUserInput();
+		} else {
+			
+		}
 	}
 	
 	private void resuscitate(String targetName) {
-		
+		Mercenary target = (Mercenary) GetName.getItemWithName(room.getUnconsciousMercenaries(), targetName);
+		if (target == null) {
+			System.out.println("ERROR: " + targetName + " is not a valid person to resuscitate! Try again:");
+			undergoUserInput();
+		} else {
+			
+		}
 	}
 	
 	private void goTo(String targetName) {
-		
+		Room target = (Room) GetName.getItemWithName(room.getExits(), targetName);
+		if (target == null) {
+			System.out.println("ERROR: " + targetName + " is not a valid room to go to! Try again:");
+			undergoUserInput();
+		} else {
+			
+		}
 	}
 	
 	private static boolean startsWith(String string, String startsWith) {
