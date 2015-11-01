@@ -52,34 +52,26 @@ public class Room implements GetName {
 		return (ArrayList<Mercenary>) mercenaries.clone();
 	}
 	
-	public ArrayList<Mercenary> getConsciousMercenaries() {
+	public ArrayList<Mercenary> getMercenariesOfStatus(Mercenary.Status status) {
 		ArrayList<Mercenary> out = new ArrayList<Mercenary>();
 		for (Mercenary m : mercenaries) {
-			if (m.getStatus() == Mercenary.Status.NORMAL) {
+			if (m.getStatus() == status) {
 				out.add(m);
 			}
 		}
 		return out;
+	}
+	
+	public ArrayList<Mercenary> getConsciousMercenaries() {
+		return getMercenariesOfStatus(Mercenary.Status.NORMAL);
 	}
 	
 	public ArrayList<Mercenary> getUnconsciousMercenaries() {
-		ArrayList<Mercenary> out = new ArrayList<Mercenary>();
-		for (Mercenary m : mercenaries) {
-			if (m.getStatus() == Mercenary.Status.UNCONSCIOUS) {
-				out.add(m);
-			}
-		}
-		return out;
+		return getMercenariesOfStatus(Mercenary.Status.UNCONSCIOUS);
 	}
 	
 	public ArrayList<Mercenary> getDeadMercenaries() {
-		ArrayList<Mercenary> out = new ArrayList<Mercenary>();
-		for (Mercenary m : mercenaries) {
-			if (m.getStatus() == Mercenary.Status.DEAD) {
-				out.add(m);
-			}
-		}
-		return out;
+		return getMercenariesOfStatus(Mercenary.Status.DEAD);
 	}
 	
 	public void describe() {
