@@ -53,27 +53,10 @@ public class Room implements GetName {
 	}
 	
 	public void describe() {
-		System.out.println("You are in " + name + " " + listMercenaries());
-	}
-	
-	private String listMercenaries() {
 		if (mercenaries.size() == 0) {
-			return "alone";
-		} else if (mercenaries.size() == 1) {
-			return "with " + mercenaries.get(0).getName();
-		} else if (mercenaries.size() == 2) {
-			return "with " + mercenaries.get(0).getName() + " and " + mercenaries.get(1).getName();
+			System.out.println("You are alone in " + name);
 		} else {
-			String out = "";
-			for (int i = 0; i < mercenaries.size(); i++) {
-				out += mercenaries.get(i).getName();
-				if (i < mercenaries.size() - 2) {
-					out += ", ";
-				} else if (i == mercenaries.size() - 2) {
-					out += ", and ";
-				}
-			}
-			return "with " + out;
+			System.out.println("You are in " + name + " with " + StringHandling.toCommaSeperatedString(mercenaries));
 		}
 	}
 	
