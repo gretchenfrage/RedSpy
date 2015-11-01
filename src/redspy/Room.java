@@ -2,7 +2,7 @@ package redspy;
 
 import java.util.ArrayList;
 
-public class Room {
+public class Room implements GetName {
 	
 	public static enum Status {
 		NORMAL, INTEL, ENDGAME
