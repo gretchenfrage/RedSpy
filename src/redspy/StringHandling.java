@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class StringHandling {
 	
-	public static String toCommaSeperatedString(ArrayList<GetName> a) {
+	public static String toCommaSeperatedString(ArrayList<? extends GetName> a) {
 		if (a.size() == 0) {
 			return "";
 		} else if (a.size() == 1) {
@@ -25,7 +25,7 @@ public class StringHandling {
 		}
 	}
 	
-	public static String toSlashSeperatedString(ArrayList<GetName> a) {
+	public static String toSlashSeperatedString(ArrayList<? extends GetName> a) {
 		String out = "";
 		for (int i = 0; i < a.size(); i++) {
 			out += a.get(i);
