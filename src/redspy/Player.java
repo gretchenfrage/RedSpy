@@ -9,4 +9,8 @@ public class Player {
 		game = gameIn;
 	}
 	
+	public Room getRoom() {
+		return room;
+	}
+	
 }
