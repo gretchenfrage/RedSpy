@@ -28,7 +28,7 @@ public class StringHandling {
 	public static String toSlashSeperatedString(ArrayList<? extends GetName> a) {
 		String out = "";
 		for (int i = 0; i < a.size(); i++) {
-			out += a.get(i);
+			out += a.get(i).getName();
 			if (i < a.size() - 1) {
 				out += "/";
 			}
