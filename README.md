@@ -1,5 +1,5 @@
 # RedSpy
-Text based adventure game by Phoenix Kahlo (Gretchenfrage)
+Text based adventure game
 
 Based on Team Fortress 2 universe
 
