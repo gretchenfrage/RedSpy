@@ -52,11 +52,44 @@ public class Room implements GetName {
 		return (ArrayList<Mercenary>) mercenaries.clone();
 	}
 	
+	public ArrayList<Mercenary> getConsciousMercenaries() {
+		ArrayList<Mercenary> out = new ArrayList<Mercenary>();
+		for (Mercenary m : mercenaries) {
+			if (m.getStatus() == Mercenary.Status.NORMAL) {
+				out.add(m);
+			}
+		}
+		return out;
+	}
+	
+	public ArrayList<Mercenary> getUnconsciousMercenaries() {
+		ArrayList<Mercenary> out = new ArrayList<Mercenary>();
+		for (Mercenary m : mercenaries) {
+			if (m.getStatus() == Mercenary.Status.UNCONSCIOUS) {
+				out.add(m);
+			}
+		}
+		return out;
+	}
+	
+	public ArrayList<Mercenary> getDeadMercenaries() {
+		ArrayList<Mercenary> out = new ArrayList<Mercenary>();
+		for (Mercenary m : mercenaries) {
+			if (m.getStatus() == Mercenary.Status.DEAD) {
+				out.add(m);
+			}
+		}
+		return out;
+	}
+	
 	public void describe() {
 		if (mercenaries.size() == 0) {
 			System.out.println("You are alone in " + name);
 		} else {
-			System.out.println("You are in " + name + " with " + GetName.toCommaSeperatedString(mercenaries));
+			System.out.println("You are in " + name);
+			System.out.println("Standing in the room with you are " + GetName.toCommaSeperatedString(getConsciousMercenaries()));
+			System.out.println("Lying down unconscious but breathing are " + GetName.toCommaSeperatedString(getUnconsciousMercenaries()));
+			System.out.println("Lying down dead are " + GetName.toCommaSeperatedString(getDeadMercenaries()));
 		}
 	}
 	
