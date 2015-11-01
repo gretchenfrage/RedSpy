@@ -38,4 +38,16 @@ public interface GetName {
 		}
 	}
 	
+	/*
+	 * returns null if there are no items with that name
+	 */
+	static GetName getItemWithName(ArrayList<? extends GetName> a, String name) {
+		for (GetName n : a) {
+			if (n.getName().equals(name)) {
+				return n;
+			}
+		}
+		return null;
+	}
+	
 }
