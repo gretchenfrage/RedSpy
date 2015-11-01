@@ -53,25 +53,27 @@ public class Room {
 	}
 	
 	public void describe() {
-		System.out.println("You are in " + name + " with " + listMercenaries());
+		System.out.println("You are in " + name + " " + listMercenaries());
 	}
 	
 	private String listMercenaries() {
-		if (mercenaries.size() == 1) {
-			return mercenaries.get(0).getName();
+		if (mercenaries.size() == 0) {
+			return "alone";
+		} else if (mercenaries.size() == 1) {
+			return "with " + mercenaries.get(0).getName();
 		} else if (mercenaries.size() == 2) {
-			return mercenaries.get(0).getName() + " and " + mercenaries.get(1).getName();
+			return "with " + mercenaries.get(0).getName() + " and " + mercenaries.get(1).getName();
 		} else {
 			String out = "";
 			for (int i = 0; i < mercenaries.size(); i++) {
 				out += mercenaries.get(i).getName();
 				if (i < mercenaries.size() - 2) {
 					out += ", ";
-				} else if (i == mercenaries.size() - 1) {
+				} else if (i == mercenaries.size() - 2) {
 					out += ", and ";
 				}
 			}
-			return out;
+			return "with " + out;
 		}
 	}
 	
