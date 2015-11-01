@@ -24,24 +24,12 @@ public class Player {
 		if (room.getExits().size() > 0) {
 			System.out.println("[go to " + GetName.toSlashSeperatedString(room.getExits()) + "]");
 		}
-		ArrayList<Mercenary> conscious = new ArrayList<Mercenary>();
-		ArrayList<Mercenary> unconscious = new ArrayList<Mercenary>();
-		for (Mercenary m : room.getMercenaries()) {
-			switch (m.getStatus()) {
-				case NORMAL:
-					conscious.add(m);
-					break;
-				case UNCONSCIOUS:
-					unconscious.add(m);
-					break;
-			}
+		if (room.getConsciousMercenaries().size() > 0) {
+			System.out.println("[shoot " + GetName.toSlashSeperatedString(room.getConsciousMercenaries()) + "]");
+			System.out.println("[talk to " + GetName.toSlashSeperatedString(room.getConsciousMercenaries()) + "]");
 		}
-		if (conscious.size() > 0) {
-			System.out.println("[shoot " + GetName.toSlashSeperatedString(conscious) + "]");
-			System.out.println("[talk to " + GetName.toSlashSeperatedString(conscious) + "]");
-		}
-		if (unconscious.size() > 0) {
-			System.out.println("[resuscitate " + GetName.toSlashSeperatedString(unconscious));
+		if (room.getUnconsciousMercenaries().size() > 0) {
+			System.out.println("[resuscitate " + GetName.toSlashSeperatedString(room.getUnconsciousMercenaries()) + "]");
 		}
 		undergoUserInput();
 	}
@@ -63,19 +51,19 @@ public class Player {
 		}
 	}
 	
-	private void shoot(String target) {
+	private void shoot(String targetName) {
 		
 	}
 	
-	private void talkTo(String target) {
+	private void talkTo(String targetName) {
 		
 	}
 	
-	private void resuscitate(String target) {
+	private void resuscitate(String targetName) {
 		
 	}
 	
-	private void goTo(String target) {
+	private void goTo(String targetName) {
 		
 	}
 	
