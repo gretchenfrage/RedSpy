@@ -79,9 +79,15 @@ public class Room implements GetName {
 			System.out.println("You are alone in " + name);
 		} else {
 			System.out.println("You are in " + name);
-			System.out.println("Standing in the room with you" + (mercenaries.size() > 1 ? " are " : " is ") + GetName.toCommaSeperatedString(getConsciousMercenaries()));
-			System.out.println("Lying down unconscious but breathing"+ (mercenaries.size() > 1 ? " are " : " is ") + GetName.toCommaSeperatedString(getUnconsciousMercenaries()));
-			System.out.println("Lying down dead" + (mercenaries.size() > 1 ? " are " : " is ") + GetName.toCommaSeperatedString(getDeadMercenaries()));
+			if (getConsciousMercenaries().size() > 0) {
+				System.out.println("Standing in the room with you" + (getConsciousMercenaries().size() > 1 ? " are " : " is ") + GetName.toCommaSeperatedString(getConsciousMercenaries()));
+			}
+			if (getUnconsciousMercenaries().size() > 0) {
+				System.out.println("Lying down unconscious but breathing"+ (getUnconsciousMercenaries().size() > 1 ? " are " : " is ") + GetName.toCommaSeperatedString(getUnconsciousMercenaries()));
+			}
+			if (getDeadMercenaries().size() > 0) {
+				System.out.println("Lying down dead" + (getDeadMercenaries().size() > 1 ? " are " : " is ") + GetName.toCommaSeperatedString(getDeadMercenaries()));
+			}
 		}
 	}
 	
