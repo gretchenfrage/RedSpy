@@ -46,7 +46,7 @@ public class Player {
 		} else if (startsWith(input.toLowerCase(), "go to") && input.length() >= 7) {
 			goTo(input.substring(6, input.length()));
 		} else {
-			System.out.println("INVALID INPUT");
+			System.out.println("ERROR: \"" + input + "\" is not a valid action! Try again:");
 			undergoUserInput();
 		}
 	}
