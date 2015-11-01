@@ -22,7 +22,7 @@ public class Player {
 	public void takeUserTurn() {
 		System.out.println("What do you do?");
 		if (room.getExits().size() > 0) {
-			System.out.println("[go to " + StringHandling.toSlashSeperatedString(room.getExits()) + "]");
+			System.out.println("[go to " + GetName.toSlashSeperatedString(room.getExits()) + "]");
 		}
 		ArrayList<Mercenary> conscious = new ArrayList<Mercenary>();
 		ArrayList<Mercenary> unconscious = new ArrayList<Mercenary>();
@@ -37,11 +37,11 @@ public class Player {
 			}
 		}
 		if (conscious.size() > 0) {
-			System.out.println("[shoot " + StringHandling.toSlashSeperatedString(conscious) + "]");
-			System.out.println("[talk to " + StringHandling.toSlashSeperatedString(conscious) + "]");
+			System.out.println("[shoot " + GetName.toSlashSeperatedString(conscious) + "]");
+			System.out.println("[talk to " + GetName.toSlashSeperatedString(conscious) + "]");
 		}
 		if (unconscious.size() > 0) {
-			System.out.println("[resuscitate " + StringHandling.toSlashSeperatedString(unconscious));
+			System.out.println("[resuscitate " + GetName.toSlashSeperatedString(unconscious));
 		}
 		undergoUserInput();
 	}
