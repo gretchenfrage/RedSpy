@@ -6,14 +6,14 @@ public class Map {
 		INTEL, MAINROOM, PLAZA, MEDICLAB, FRONTROOM, BASEMENT, TUNNEL, BRIDGE, SNIPERFORT
 	}
 	
-	private Room intel = new Room("the intel room", Room.Type.INTEL);
+	private Room intel = new Room("the intel room", Room.Status.INTEL);
 	private Room mainRoom = new Room("the main room");
 	private Room plaza = new Room("the plaza");
 	private Room medicLab = new Room("Medic's lab");
 	private Room frontRoom = new Room("the front room");
 	private Room basement = new Room("the basement");
-	private Room tunnel = new Room("the tunnel", Room.Type.ENDGAME);
-	private Room bridge = new Room("the bridge", Room.Type.ENDGAME);
+	private Room tunnel = new Room("the tunnel", Room.Status.ENDGAME);
+	private Room bridge = new Room("the bridge", Room.Status.ENDGAME);
 	private Room sniperFort = new Room("Sniper's fort");
 	
 	public Map() {
@@ -46,6 +46,10 @@ public class Map {
 			case SNIPERFORT: return sniperFort;
 			default: return null;
 		}
+	}
+	
+	public Map getMap() {
+		return map;
 	}
 	
 }
