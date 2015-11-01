@@ -23,6 +23,7 @@ public class Game {
 		System.out.println("You are checking up on the mercenaries, standing in the main room of the fort, when you hear the familiar alarm...");
 		System.out.println("ADMINISTRATOR: red spy is in the base!");
 		player.getRoom().describe();
+		player.takeUserTurn();
 	}
 	
 	public Map getMap() {
