@@ -2,7 +2,7 @@ package redspy;
 
 import java.util.ArrayList;
 
-public class Mercenary {
+public class Mercenary implements GetName {
 	
 	public static enum Status {
 		NORMAL, UNCONSCIOUS, DEAD
