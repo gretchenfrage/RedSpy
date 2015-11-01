@@ -22,12 +22,12 @@ public class Mercenary {
 		return "Mercenarius Genericus";
 	}
 	
-	public final Status getStatus() {
-		return status;
+	public int getPerceptionModifier() {
+		return 0;
 	}
 	
-	public final void setStatus(Status statusIn) {
-		status = statusIn;
+	public int getCombatModifier() {
+		return 0;
 	}
 	
 	public ArrayList<Room> getDomain() {
@@ -36,6 +36,14 @@ public class Mercenary {
 			out.add(map.getRoom(a));
 		}
 		return out;
+	}
+	
+	public final Status getStatus() {
+		return status;
+	}
+	
+	public final void setStatus(Status statusIn) {
+		status = statusIn;
 	}
 	
 	public final void goTo(Room newRoom) {
