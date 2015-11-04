@@ -9,4 +9,14 @@ public class Scout extends Mercenary {
 		super(mapIn);
 	}
 
+	@Override
+	public String getName() {
+		return "Scout";
+	}
+
+	@Override
+	public String getBanter() {
+		return "Come on come on! Let's go batter up that knucklehead!";
+	}
+
 }
