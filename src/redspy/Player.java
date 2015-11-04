@@ -78,7 +78,9 @@ public class Player {
 			System.out.println("ERROR: " + targetName + " is not a valid person to resuscitate! Try again:");
 			undergoUserInput();
 		} else {
-			
+			target.setStatus(Mercenary.Status.DEAD);
+			//TODO: make mercenary know who killed them
+			System.out.println("You administer medical aid to " + target.getName() + ". They regain consciousness.");
 		}
 	}
 	
