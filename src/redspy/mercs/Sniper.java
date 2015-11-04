@@ -14,8 +14,7 @@ public class Sniper extends Mercenary {
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
-		return super.getName();
+		return "Sniper";
 	}
 
 	@Override
