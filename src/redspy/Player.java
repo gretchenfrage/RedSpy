@@ -68,7 +68,7 @@ public class Player {
 			System.out.println("ERROR: " + targetName + " is not a valid person to talk to! Try again:");
 			undergoUserInput();
 		} else {
-			
+			System.out.println(target.getName().toUpperCase() + ": " + target.getBanter());
 		}
 	}
 	
