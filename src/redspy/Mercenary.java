@@ -54,4 +54,8 @@ public class Mercenary implements GetName {
 		room = newRoom;
 	}
 	
+	public String getBanter() {
+		return "Filthy spy...";
+	}
+	
 }
