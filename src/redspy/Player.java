@@ -55,7 +55,10 @@ public class Player {
 			System.out.println("ERROR: " + targetName + " is not a valid person to shoot! Try again:");
 			undergoUserInput();
 		} else {
-			
+			if (target instanceof Mercenary) {
+				target.setStatus(Mercenary.Status.DEAD);
+				System.out.println("You shoot " + target.getName() + ". He does not turn red. You have killed your friend.");
+			} //TODO: else statement for if it's an instance of Enemy
 		}
 	}
 	
