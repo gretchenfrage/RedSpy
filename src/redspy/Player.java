@@ -90,7 +90,9 @@ public class Player {
 			System.out.println("ERROR: " + targetName + " is not a valid room to go to! Try again:");
 			undergoUserInput();
 		} else {
-			
+			room = target;
+			System.out.println("You walk into " + target.getName());
+			target.describe();
 		}
 	}
 	
