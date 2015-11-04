@@ -76,9 +76,8 @@ public class Room implements GetName {
 	
 	public void describe() {
 		if (mercenaries.size() == 0) {
-			System.out.println("You are alone in " + name);
+			System.out.println("You are alone");
 		} else {
-			System.out.println("You are in " + name);
 			if (getConsciousMercenaries().size() > 0) {
 				System.out.println("Standing in the room with you" + (getConsciousMercenaries().size() > 1 ? " are " : " is ") + GetName.toCommaSeperatedString(getConsciousMercenaries()));
 			}
