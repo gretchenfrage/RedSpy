@@ -55,7 +55,7 @@ public class Mercenary implements GetName {
 	}
 	
 	public String getBanter() {
-		return "Filthy spy...";
+		return "damn spies...";
 	}
 	
 }
