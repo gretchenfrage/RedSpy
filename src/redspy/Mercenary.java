@@ -71,4 +71,8 @@ public class Mercenary implements GetName {
 		return map;
 	}
 	
+	public final Room getRoom() {
+		return room;
+	}
+	
 }
