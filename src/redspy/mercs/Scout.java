@@ -19,4 +19,11 @@ public class Scout extends Mercenary {
 		return "Come on come on! Let's go batter up that knucklehead!";
 	}
 
+	@Override
+	public void takePassiveTurn() {
+		wander();
+		wander();
+		wander();
+	}
+
 }
