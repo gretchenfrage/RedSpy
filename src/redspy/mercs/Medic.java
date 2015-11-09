@@ -42,6 +42,8 @@ public class Medic extends Mercenary {
 		ArrayList<Mercenary> unconscious = getRoom().getUnconsciousMercenaries();
 		if (unconscious.size() > 0) {
 			unconscious.get((int) (Math.random() * unconscious.size())).setStatus(Mercenary.Status.NORMAL);
+		} else {
+			wander();
 		}
 	}
 
