@@ -58,4 +58,10 @@ public class Map {
 		return out;
 	}
 	
+	public void clearBuffers() {
+		for (Room r : getAllRooms()) {
+			r.clearBuffer();
+		}
+	}
+	
 }
