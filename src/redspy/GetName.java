@@ -43,7 +43,7 @@ public interface GetName {
 	 */
 	static GetName getItemWithName(ArrayList<? extends GetName> a, String name) {
 		for (GetName n : a) {
-			if (n.getName().equals(name)) {
+			if (n.getName().toLowerCase().equals(name.toLowerCase())) {
 				return n;
 			}
 		}
