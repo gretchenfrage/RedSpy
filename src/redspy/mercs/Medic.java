@@ -36,7 +36,13 @@ public class Medic extends Mercenary {
 	public String getBanter() {
 		return "Are ve ready to feel some schadenfreude, kamerad? Ha ha ha!";
 	}
-	
-	//TODO: revive teammates
+
+	@Override
+	public void takePassiveTurn() {
+		ArrayList<Mercenary> unconscious = getRoom().getUnconsciousMercenaries();
+		if (unconscious.size() > 0) {
+			unconscious.get((int) (Math.random() * unconscious.size())).setStatus(Mercenary.Status.NORMAL);
+		}
+	}
 
 }
