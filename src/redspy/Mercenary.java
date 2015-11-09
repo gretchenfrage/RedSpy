@@ -30,6 +30,15 @@ public class Mercenary implements GetName {
 		return 0;
 	}
 	
+	public void wander() {
+		ArrayList<Room> possibilities = room.getExits();
+		goTo(possibilities.get((int) (Math.random() * possibilities.size())));
+	}
+	
+	public void takePassiveTurn() {
+		wander();
+	}
+	
 	public ArrayList<Room> getDomain() {
 		ArrayList<Room> out = new ArrayList<Room>();
 		for (Map.RoomAccessor a : Map.RoomAccessor.values()) {
