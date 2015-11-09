@@ -109,4 +109,8 @@ public class Player {
 		room.describe();
 	}
 	
+	public void flushBuffer() {
+		room.flushBuffer();
+	}
+	
 }
