@@ -8,6 +8,10 @@ import redspy.Room;
 
 public class Sniper extends Mercenary {
 
+	@Override
+	public void takePassiveTurn() {
+	}
+
 	public Sniper(Map mapIn) {
 		super(mapIn);
 	}
