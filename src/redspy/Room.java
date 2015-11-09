@@ -12,6 +12,7 @@ public class Room implements GetName {
 	private ArrayList<Room> exits = new ArrayList<Room>();
 	private Status type;
 	private ArrayList<Mercenary> mercenaries = new ArrayList<Mercenary>();
+	private ArrayList<String> chatBuffer = new ArrayList<String>();
 	
 	public Room(String nameIn, Status typeIn) {
 		name = nameIn;
@@ -20,6 +21,21 @@ public class Room implements GetName {
 	
 	public Room(String nameIn) {
 		this(nameIn, Status.NORMAL);
+	}
+	
+	public void addChat(String chat) {
+		chatBuffer.add(chat);
+	}
+	
+	public void clearBuffer() {
+		chatBuffer = new ArrayList<String>();
+	}
+	
+	public void flushBuffer() {
+		for (String s : chatBuffer) {
+			System.out.println(s);
+		}
+		clearBuffer();
 	}
 	
 	public String getName() {
