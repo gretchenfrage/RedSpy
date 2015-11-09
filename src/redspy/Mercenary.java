@@ -67,7 +67,7 @@ public class Mercenary implements GetName {
 		return "damn spies...";
 	}
 	
-	protected final Map getMap() {
+	public final Map getMap() {
 		return map;
 	}
 	
