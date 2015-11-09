@@ -7,6 +7,22 @@ import redspy.Mercenary;
 import redspy.Room;
 
 public class Engineer extends Mercenary {
+	
+	private int tier = 0;
+
+	@Override
+	public int getCombatModifier() {
+		int oldTier = tier;
+		tier = 0;
+		return oldTier * 10;
+	}
+
+	@Override
+	public void takePassiveTurn() {
+		if (tier < 3) {
+			tier++;
+		}
+	}
 
 	public Engineer(Map mapIn) {
 		super(mapIn);
