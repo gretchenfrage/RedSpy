@@ -105,4 +105,8 @@ public class Player {
 		return false;
 	}
 	
+	public void describeRoom() {
+		room.describe();
+	}
+	
 }
