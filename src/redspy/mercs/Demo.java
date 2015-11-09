@@ -5,6 +5,8 @@ import redspy.Mercenary;
 
 public class Demo extends Mercenary {
 
+	private boolean stickysDeployed = false;
+	
 	public Demo(Map mapIn) {
 		super(mapIn);
 	}
@@ -18,7 +20,20 @@ public class Demo extends Mercenary {
 	public String getBanter() {
 		return "Bloody spies, infesting the damn place like rats, I'll teach em'...";
 	}
-	
-	//TODO: implement stickybomb buff
+
+	@Override
+	public int getCombatModifier() {
+		if (stickysDeployed) {
+			stickysDeployed = false;
+			return 30;
+		} else {
+			return 0;
+		}
+	}
+
+	@Override
+	public void takePassiveTurn() {
+		stickysDeployed = true;
+	}
 
 }
