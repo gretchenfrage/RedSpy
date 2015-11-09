@@ -1,5 +1,7 @@
 package redspy;
 
+import java.util.ArrayList;
+
 public class Map {
 	
 	public static enum RoomAccessor {
@@ -46,6 +48,14 @@ public class Map {
 			case SNIPERFORT: return sniperFort;
 			default: return null;
 		}
+	}
+	
+	public ArrayList<Room> getAllRooms() {
+		ArrayList<Room> out = new ArrayList<Room>();
+		for (RoomAccessor accessor : RoomAccessor.values()) {
+			out.add(getRoom(accessor));
+		}
+		return out;
 	}
 	
 }
