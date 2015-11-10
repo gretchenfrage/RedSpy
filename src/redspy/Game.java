@@ -38,6 +38,7 @@ public class Game {
 			map.takeMercTurns();
 			player.flushBuffer();
 			map.clearBuffers();
+			System.out.println();
 		}
 	}
 	
