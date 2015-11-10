@@ -32,8 +32,11 @@ public class Game {
 	public void play() {
 		System.out.println("You are checking up on the mercenaries, standing in the main room of the fort, when you hear the familiar alarm...");
 		System.out.println("ADMINISTRATOR: The red spy is in the base!");
-		player.describeRoom();
-		player.takeUserTurn();
+		while (true) {
+			player.describeRoom();
+			player.takeUserTurn();
+			map.takeMercTurns();
+		}
 	}
 	
 	public Map getMap() {
