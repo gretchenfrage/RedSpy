@@ -64,8 +64,10 @@ public class Mercenary implements GetName {
 	public final void goTo(Room newRoom) {
 		if (room != null) {
 			room.removeMercenary(this);
+			room.addChat(getName() + " leaves " + room.getName());
 		}
 		newRoom.addMercenary(this);
+		newRoom.addChat(getName() + " enters " + newRoom.getName());
 		room = newRoom;
 	}
 	
