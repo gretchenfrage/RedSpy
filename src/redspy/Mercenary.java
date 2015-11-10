@@ -35,6 +35,12 @@ public class Mercenary implements GetName {
 		goTo(possibilities.get((int) (Math.random() * possibilities.size())));
 	}
 	
+	public final void takeTurn() {
+		if (status == Status.NORMAL) {
+			takePassiveTurn();
+		}
+	}
+	
 	public void takePassiveTurn() {
 		wander();
 	}
