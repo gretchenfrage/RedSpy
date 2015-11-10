@@ -41,7 +41,10 @@ public class Medic extends Mercenary {
 	public void takePassiveTurn() {
 		ArrayList<Mercenary> unconscious = getRoom().getUnconsciousMercenaries();
 		if (unconscious.size() > 0) {
-			unconscious.get((int) (Math.random() * unconscious.size())).setStatus(Mercenary.Status.NORMAL);
+			unconscious.get((int) (Math.random() * unconscious.size()));
+			Mercenary revivee = unconscious.get((int) (Math.random() * unconscious.size()));
+			revivee.setStatus(Mercenary.Status.NORMAL);
+			getRoom().addChat("Medic revives " + revivee.getName());
 		} else {
 			wander();
 		}
