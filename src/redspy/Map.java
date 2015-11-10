@@ -74,4 +74,10 @@ public class Map {
 		return out;
 	}
 	
+	public void takeMercTurns() {
+		for (Mercenary m : getAllMercs()) {
+			m.takeTurn();
+		}
+	}
+	
 }
