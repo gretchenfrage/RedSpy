@@ -47,7 +47,5 @@ public class Engineer extends Mercenary {
 	public String getBanter() {
 		return "Howdy pardner, ya haven't happened to see a red spy anywhere, I don't reckon?";
 	}
-
-	//TODO: implement sentry tier system
 	
 }
