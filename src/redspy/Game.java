@@ -36,6 +36,8 @@ public class Game {
 			player.describeRoom();
 			player.takeUserTurn();
 			map.takeMercTurns();
+			player.flushBuffer();
+			map.clearBuffers();
 		}
 	}
 	
