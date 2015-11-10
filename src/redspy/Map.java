@@ -64,4 +64,14 @@ public class Map {
 		}
 	}
 	
+	public ArrayList<Mercenary> getAllMercs() {
+		ArrayList<Mercenary> out = new ArrayList<Mercenary>();
+		for (Room r : getAllRooms()) {
+			for (Mercenary m : r.getMercenaries()) {
+				out.add(m);
+			}
+		}
+		return out;
+	}
+	
 }
