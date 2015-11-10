@@ -21,6 +21,7 @@ public class Engineer extends Mercenary {
 	public void takePassiveTurn() {
 		if (tier < 3) {
 			tier++;
+			getRoom().addChat("Engineer upgrades his sentry to level " + tier);
 		}
 	}
 
