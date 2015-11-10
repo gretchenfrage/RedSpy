@@ -15,7 +15,9 @@ public class Mercenary implements GetName {
 	public Mercenary(Map mapIn) {
 		map = mapIn;
 		ArrayList<Room> domain = getDomain();
-		goTo(domain.get((int) (Math.random() * domain.size())));
+		Room startRoom = domain.get((int) (Math.random() * domain.size()));
+		room = startRoom;
+		startRoom.addMercenary(this);
 	}
 	
 	public String getName() {
